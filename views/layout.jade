@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/cover.css')
+  body
+    div(class='site-wrapper')
+        div(class='site-wrapper-inner')
+            div(class='cover-container')
+                div(class='masthead clearfix')
+                    div(class='inner')
+                        h3(class='masthead-brand') Statusr
+                        ul(class='nav masthead-nav')
+                            li(class=(title === 'Home' ? 'active' : ''))
+                                a(href='/') Home
+                            li(class=(title === 'Post' ? 'active' : ''))
+                                a(href='/message/post') Post Status
+                div(class='inner-cover')
+                    block content
+                if (title == 'Home')
+                    div(class='feed')
+                        include feed 
+
+
+    
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='https://raw.githubusercontent.com/twbs/bootstrap/master/docs/assets/js/docs.min.js')
+    script(src='/javascripts/status.js')

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1(class='cover-heading') Post Your Status
+	label Your Name:
+		br
+		input(class='form-control',type='text',id='name')
+	br
+	label Your Status:
+		br
+		input(class='form-control',type='text',id='status')
+	br
+	a(href='javascript:statusNamespace.submitStatus(document.getElementById("name").value,document.getElementById("status").value)', class='btn btn-lg btn-default') Post!
+
+            
